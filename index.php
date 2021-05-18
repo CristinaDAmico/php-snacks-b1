@@ -11,7 +11,7 @@
 
 <h2>Snack 1</h2>
 <?php
-/* PHP Snack 1:
+/*  PHP Snack 1:
     Creiamo un array 'matches' contenente altri array i quali rappresentano delle partite di basket di un’ipotetica tappa del calendario.
     Ogni array della partita avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite.
     Stampiamo a schermo tutte le partite con questo schema:
@@ -76,9 +76,10 @@ $matches = [
 <?php } ?>
 
 
+
 <h2>Snack 2</h2>
 <?php
-/* PHP Snack 2:
+/*  PHP Snack 2:
     Passare come parametri GET (query string) name, mail e age
     verificare (cercando i metodi che non
     conosciamo nella documentazione) che:
@@ -103,6 +104,22 @@ elseif ( is_numeric($age) === false ) {
 } 
 else {
     echo 'Accesso riuscito!';
+}
+
+?>
+
+
+
+<h2>Snack 3</h2>
+<?php
+/*  PHP Snack 3 Bonus 
+    Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta.
+*/
+
+$random = [];
+
+for ( $i = 0; $i < 15; $i++ ) {
+    echo rand(0,100)."<br />";
 }
 
 ?>
