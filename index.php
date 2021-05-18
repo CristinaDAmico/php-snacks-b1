@@ -9,6 +9,7 @@
 
 <body>
 
+<h2>Snack 1</h2>
 <?php
 /* PHP Snack 1:
     Creiamo un array 'matches' contenente altri array i quali rappresentano delle partite di basket di un’ipotetica tappa del calendario.
@@ -50,11 +51,11 @@ $matches = [
     ],
 ];
 
-var_dump ($matches);
+//var_dump ($matches);
 
 ?>
 
-<h2>Risultati partite:</h2>
+<h3>Risultati partite:</h3>
 
 <?php for( $i = 0; $i < count($matches); $i++) { ?>
 
@@ -73,6 +74,38 @@ var_dump ($matches);
     </ul>
 
 <?php } ?>
- 
+
+
+<h2>Snack 2</h2>
+<?php
+/* PHP Snack 2:
+    Passare come parametri GET (query string) name, mail e age
+    verificare (cercando i metodi che non
+    conosciamo nella documentazione) che:
+    1. name sia più lungo di 3 caratteri
+    2. che mail contenga un punto e una chiocciola
+    3. che age sia un numero.
+    Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
+*/
+
+$name = $_GET['name'];
+$mail = $_GET['mail'];
+$age= $_GET['age'];
+
+if ( strlen($name) <= 3 ) {
+    echo 'Accesso negato!';
+} 
+elseif ( empty($mail) || strpos($mail, '@') === false || strpos($mail, '.') === false ) {
+    echo 'Accesso negato!';
+} 
+elseif ( is_numeric($age) === false ) {
+    echo 'Accesso negato!';
+} 
+else {
+    echo 'Accesso riuscito!';
+}
+
+?>
+
 </body>
 </html>
